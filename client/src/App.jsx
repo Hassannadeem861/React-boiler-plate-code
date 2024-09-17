@@ -5,7 +5,7 @@ import Contact from "./Pages/Contact.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
 import Register from "./Pages/Register.jsx";
 import Login from "./Pages/Login.jsx";
-import Navber from "./Components/Navber.jsx";
+import Navber from "./Components/Navber/Navber.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
