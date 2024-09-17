@@ -11,7 +11,7 @@ const Login = () => {
 
   const inputHandler = (e) => {
     let inputName = e.target.name;
-    let inputValue = e.target.value;
+    let inputValue = e.target.value.trim();  // Trim input while typing;
     // console.log("inputName: ", inputName);
     // console.log("inputValue: ", inputValue);
 
@@ -23,6 +23,11 @@ const Login = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     console.log("user: ", user);
+    
+    setUser({
+        email: "",
+        password: "",
+      });
 
     // try {
     //   const response = await axios.post('http://localhost:8080/api/v1/register', user)
@@ -35,6 +40,7 @@ const Login = () => {
 
     //   if (response.ok.trim()) {
     //     // toast.success(response.data.message)
+    // navigator('/home')
     //   } else {
     //      // toast.error(response.data.error)
     //   }
@@ -42,8 +48,6 @@ const Login = () => {
     // } catch (error) {
     //   console.log("error in login: ", error);
     // }
-
-    
   };
 
   return (
